@@ -17,18 +17,18 @@
 
 package org.apache.spark.deploy
 
-import java.net.InetAddress
 import java.io.{File, FileNotFoundException, IOException}
+import java.net.InetAddress
 
 import org.apache.hadoop.conf.Configuration
+import org.apache.hadoop.fs.{FileSystem, Path}
+import org.mockito.ArgumentMatchers.any
+import org.mockito.Mockito.mock
+import org.mockito.Mockito.when
 
 import org.apache.spark.{SparkConf, SparkFunSuite}
 import org.apache.spark.deploy.SparkHadoopUtil.{SET_TO_DEFAULT_VALUES, SOURCE_SPARK_HADOOP, SOURCE_SPARK_HIVE}
 import org.apache.spark.internal.config.BUFFER_SIZE
-
-import org.mockito.Mockito.when
-import org.mockito.ArgumentMatchers.any
-import org.mockito.Mockito.mock
 
 class SparkHadoopUtilSuite extends SparkFunSuite {
 
